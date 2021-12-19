@@ -113,6 +113,9 @@ on post-fs-data
     chown radio radio /data/vendor/radio/copy_complete
     chmod 0660 /data/vendor/radio/copy_complete
 
+    # Chown node for Adaptive Charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
